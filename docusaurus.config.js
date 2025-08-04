@@ -9,7 +9,8 @@ const BASE_URL  = process.env.BASE_URL  // 手动覆盖优先
   ?? (IS_GITHUB ? '/wiki-documents/' : '/');
 
 const SITE_URL  = process.env.SITE_URL  // 手动覆盖优先
-  ?? (IS_GITHUB ? 'https://camthink-ai.github.io' : 'https://docs.camthink.ai');
+  ?? (IS_GITHUB ? 'https://camthink-ai.github.io' : 'https://wiki.camthink.ai');
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -24,6 +25,7 @@ const config = {
   /* GitHub / Cloudflare 共用（由上方动态注入） */
   url: SITE_URL,
   baseUrl: BASE_URL,
+
 
   /* GitHub Pages 部署 (org/user & repo) — 不在 GitHub 可忽略 */
   organizationName: 'camthink-ai',
@@ -40,7 +42,7 @@ const config = {
     locales: ['zh-Hans', 'en'],
     localeConfigs: {
       'zh-Hans': { htmlLang: 'zh-Hans', label: '中文' },
-      en:        { htmlLang: 'en-US',   label: 'English' },
+      en:       { htmlLang: 'en-US',   label: 'English' },
     },
   },
 
@@ -56,12 +58,22 @@ const config = {
         language: ['en', 'zh'],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
-        docsRouteBasePath: '/docs',
+        docsRouteBasePath: '/',
         indexDocs: true,
         indexBlog: false,
         docsDir: 'docs',
       },
     ],
+    [ '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/',
+            to: '/docs',
+          },
+        ],
+      }
+    ]
   ],
   markdown: { mermaid: true },
   themes: ['@docusaurus/theme-mermaid'],
@@ -74,7 +86,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl: undefined,  // 关闭 “编辑此页”
-          routeBasePath: 'docs',
+          routeBasePath: '/docs',
         },
         blog: false,
         theme: { customCss: './src/css/custom.css' },
@@ -95,9 +107,10 @@ const config = {
           alt: 'CamThink',
           src: 'img/logo.svg',
           srcDark: 'img/logo_dark.svg',
+          href: '/docs',
         },
         items: [
-          { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Docs' },
+          // { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Docs' },
           { href: 'https://github.com/camthink-ai',            position: 'right', label: 'GitHub' },
           { type: 'localeDropdown',                            position: 'right' },
         ],
@@ -112,7 +125,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          { title: 'Wiki',      items: [{ label: 'Wiki', to: '/docs/Welcome' }] },
+          { title: 'Wiki',      items: [{ label: 'Wiki', to: '/docs' }] },
           { title: 'Community', items: [
               { label: 'Discord', href: 'https://discord.com/invite/6TZb2Y8WKx' },
               { label: 'X',       href: 'https://x.com/CamThinkAI' },
