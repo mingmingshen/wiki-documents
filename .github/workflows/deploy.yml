@@ -38,8 +38,8 @@ jobs:
           GITHUB_ACTIONS: true
           GITHUB_PAGES: true
           DEPLOY_ENV: github
-          BASE_URL: /wiki-test/
-          SITE_URL: https://zhenglingpeng.github.io
+          BASE_URL: /wiki-documents/
+          SITE_URL: https://camthink-ai.github.io
         run: yarn build
 
       # 5. 部署到 GitHub Pages
