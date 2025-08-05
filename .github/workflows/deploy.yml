@@ -16,36 +16,63 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) 检出源码
+      # 1. 检出源码
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2) 安装 Node.js（缓存 yarn 依赖）
+      # 2. 安装 Node.js（并缓存 yarn 依赖）
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: yarn
 
-      # 3) 安装依赖
+      # 3. 安装依赖
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      # 4) 构建 Docusaurus 静态文件，输出到 ./build
-      - name: Build website
+      # 4. 构建 Docusaurus 静态网站 (GitHub Pages 版本)
+      - name: Build website for GitHub Pages
+        env:
+          NODE_ENV: production
+          GITHUB_ACTIONS: true
+          GITHUB_PAGES: true
+          DEPLOY_ENV: github
+          BASE_URL: /wiki-documents/
+          SITE_URL: https://camthink-ai.github.io
         run: yarn build
 
-      # 5) 发布到 gh-pages 分支
+      # 5. 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # GitHub 会在运行时自动注入一个临时令牌
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build        # 与 Docusaurus 默认输出路径保持一致
-          publish_branch: gh-pages    # 不需要自己先创建
-          user_name: GitHub Action    # 提交记录身份
+          publish_dir: ./build
+          publish_branch: gh-pages
+          user_name: GitHub Action
           user_email: action@github.com
           commit_message: |
             docs: deploy ${{ github.sha }} via GitHub Actions
-          # 如果有自定义域名，取消下一行注释
-          # cname: docs.example.com
+
+      # 6. 构建 Docusaurus 静态网站 (服务器版本)
+      - name: Build website for Cloud Server
+        env:
+          NODE_ENV: production
+          GITHUB_ACTIONS: true
+          GITHUB_PAGES: false
+          DEPLOY_ENV: production
+          BASE_URL: /
+          SITE_URL: https://wiki.camthink.ai
+        run: yarn build
+
+      # 7. 使用 rsync 部署到云服务器
+      - name: Deploy to Cloud Server via SSH (rsync)
+        uses: burnett01/rsync-deployments@5.2
+        with:
+          switches: -avzr --delete
+          path: ./build/
+          remote_path: ${{ secrets.TARGET_PATH }}
+          remote_host: ${{ secrets.SERVER_HOST }}
+          remote_user: ${{ secrets.SERVER_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+
