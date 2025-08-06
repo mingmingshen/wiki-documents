@@ -169,6 +169,7 @@ NE101系统正常启动后，你可以在电脑或手机的WiFi AP列表寻找�
 {
   "ts": 1740640441620,
   "values": {
+    "devSn": "undefined",  
     "devName": "NE101 Sensing Camera",
     "devMac": "D8:3B:DA:4D:10:2C",
     "battery": 84,

@@ -167,6 +167,7 @@ The MQTT message payload content sent by the camera is in JSON format, as shown 
 {
   "ts": 1740640441620,
   "values": {
+    "devSn": "undefined",  
     "devName": "NE101 Sensing Camera",
     "devMac": "D8:3B:DA:4D:10:2C",
     "battery": 84,
