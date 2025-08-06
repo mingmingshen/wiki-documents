@@ -31,7 +31,7 @@ You can press the photo button on the right side of the camera lightly to see if
 
 #### 2. Turn on the NE101 Wi-Fi AP and Connect to It on A Phone or Computer
 After the NE101 system starts normally, you can look for the Wi-Fi AP with the corresponding SSID named **NE101_ABC123**, then connect it on your computer or mobile phone without requesting a password. When you connect normally, you can access the NE101 configuration Web page in the browser through the **192.168.1.1** address. If you succeed, you will see the Web page on the browser.
->**In the latest firmware version, the wake-up logic of Wi-Fi AP is to press and hold the camera button for 3 seconds and wait for the light flashes twice in order to lower the power consumption of NE101. You can refer to the screen recording below.**
+>**In the latest firmware version, the Wi-Fi AP wake-up logic has been optimized. Previously, the AP was enabled by long-pressing the shutter button for 3–5 seconds, during which the indicator light would flash twice. This has now been changed to a single press of the shutter button to enable the AP (a photo is taken simultaneously, and the light flashes once).Once enabled, if there is no operation within one minute or no activity on the web interface after connecting to the AP, the device will enter sleep mode. Pressing the shutter button again during this period will reset the sleep timer.**
 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0px', justifyContent: 'center', alignItems: 'center' }}>
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_7.gif')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_9.png')} alt="bracket" style={{ height: '200px', objectFit: 'contain', margin: '0 auto' }} />
@@ -167,6 +167,7 @@ The MQTT message payload content sent by the camera is in JSON format, as shown 
 {
   "ts": 1740640441620,
   "values": {
+    "devSn": "undefined",  
     "devName": "NE101 Sensing Camera",
     "devMac": "D8:3B:DA:4D:10:2C",
     "battery": 84,
