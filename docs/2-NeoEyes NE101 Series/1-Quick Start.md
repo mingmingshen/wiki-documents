@@ -31,7 +31,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 #### 2、开启NE101 WiFi AP 并在手机或电脑上寻找到它
 NE101系统正常启动后，你可以在电脑或手机的WiFi AP列表寻找对应SSID规则为 **NE101_ABC123**的WiFi AP，点击连接它，你无需输入密码，当你正常链接后，即可通过**192.168.1.1**地址在浏览器中访问到NE101的配置Web页，如果你成功了将看到浏览器上的Web页面。
->**在新的固件版本中为了进一步降低NE101的使用功耗，WiFi AP的唤醒逻辑为长按拍照键3s且灯光闪烁2次，可以参考下方的操作录屏**
+>**目前最新的固件版本中优化了关于WiFi AP的唤醒逻辑，将原有长按拍照键3-5s且灯光闪烁2次更改为按下拍照键即可开启AP（此时触发拍照，灯闪一次），开启后一分钟内无操作或者连接AP后Web端无操作设备会进入休眠模式，期间再次按下拍照键会重置休眠时间**
+
+
 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0px', justifyContent: 'center', alignItems: 'center' }}>
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_7.gif')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_9.png')} alt="bracket" style={{ height: '200px', objectFit: 'contain', margin: '0 auto' }} />
@@ -167,6 +169,7 @@ NE101系统正常启动后，你可以在电脑或手机的WiFi AP列表寻找�
 {
   "ts": 1740640441620,
   "values": {
+    "devSn": "undefined",  
     "devName": "NE101 Sensing Camera",
     "devMac": "D8:3B:DA:4D:10:2C",
     "battery": 84,
