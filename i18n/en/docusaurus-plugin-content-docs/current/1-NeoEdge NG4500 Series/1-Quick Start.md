@@ -36,19 +36,27 @@ This chapter mainly helps you to use NG4500 series products quickly.
   
   ![](/img/NG45XX_SOFTWARE/Quickstart/NG4500_QucikStart6.png)
   
-  7. After confirming that the installation is complete, re-lock the back cover;
+  7. Installing the core module, first insert the gold finger end into the J1 slot at a 45° angle. Then, press the module downward by hand until the metal locks on both sides automatically engage to ensure secure installation. To remove the module, release the metal locks on both sides first, and then pull the module out.
+  
+  ![](/img/NG45XX_SOFTWARE/Quickstart/NG4500_QucikStart8.png)
+  
+  8. After confirming that the installation is complete, re-lock the back cover;
   
   ![](/img/NG45XX_SOFTWARE/Quickstart/NG4500_QucikStart7.png)
   
-  8. Use the HDMI interface to connect to an external monitor;
+  9. The diagram below presents an exploded view of the device structure.
   
-  9. Connect the wired mouse and keypad to any two of the USB Type-A interfaces;
+  ![](/img/NG45XX_SOFTWARE/Quickstart/NG4500_QucikStart9.png)
   
-  10. Connect the network cable to any one of the LAN ports;
+  10. Use the HDMI interface to connect to an external monitor;
   
-  11. Connect the USB Type-C interface to the debugging computer;
+  11. Connect the wired mouse and keypad to any two of the USB Type-A interfaces;
   
-  12. After confirming that the above operations are correct, connect the power adapter to DC-JACK and start kit development and debugging.       
+  12. Connect the network cable to any one of the LAN ports;
+  
+  13. Connect the USB Type-C interface to the debugging computer;
+  
+  14. After confirming that the above operations are correct, connect the power adapter to DC-JACK and start kit development and debugging.       
       
       > [!WARNING]
       > 
@@ -121,12 +129,12 @@ The introduction of how to deploy and run the NanoOWL real-time visual reasoning
 
 ### Hardware Requirements
 
-| Components   | Requirements                     |
-| ---- | ---------------------- |
-| Device   | Jetson Orin（Nano / NX） |
-| Memory   | ≥ 8GB（Larger models demand for high-capacity memory）       |
-| Storage  | ≥ 10GB（Depends on the model size）        |
-| GPU  | NVIDIA GPU supports CUDA  |
+| Components | Requirements                                         |
+| ---------- | ---------------------------------------------------- |
+| Device     | Jetson Orin（Nano / NX）                               |
+| Memory     | ≥ 8GB（Larger models demand for high-capacity memory） |
+| Storage    | ≥ 10GB（Depends on the model size）                    |
+| GPU        | NVIDIA GPU supports CUDA                             |
 
 ### Software Environment
 

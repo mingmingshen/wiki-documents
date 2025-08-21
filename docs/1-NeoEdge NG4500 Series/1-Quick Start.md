@@ -36,19 +36,27 @@
   
   ![](/img/NG45XX_SOFTWARE/Quickstart/NG4500_QucikStart6.png)
   
-  7. 确认安装完毕后，重新锁好底部盖板
+  7. 安装核心模组，首先将模组金手指端以45°角插入J1卡槽，然后用手向下按压模组，直到两侧的金属锁扣自动锁定，确保模组牢固安装。如需拆卸模组，需先拨开两侧的金属锁扣，再将模组取出。
   
-  ![](/img/NG45XX_SOFTWARE/Quickstart/NG4500_QucikStart7.png)
+  ![](/img/NG45XX_SOFTWARE/Quickstart/NG4500_QucikStart8.png)
   
-  8. HDMI接口连接到外部显示器
+  8. 确认安装完毕后，重新锁好底部盖板
   
-  9. 将有线鼠标和键标连接到USB Type-A接口中任意两个
+  ![](/img/NG45XX_SOFTWARE/Quickstart/NG4500_QucikStart7.png)   
   
-  10. 将网线连接到 LAN 口中任意一个
+  9. 设备结构的拆解示意图如下所示
   
-  11. 将USB Type-C 接口连接到调试电脑
+  ![](/img/NG45XX_SOFTWARE/Quickstart/NG4500_QucikStart9.png)  
   
-  12. 确认以上操作无误后，将电源适配器连接到 DC-JACK，即可开始进行套件开发调试       
+  10. HDMI接口连接到外部显示器
+  
+  11. 将有线鼠标和键标连接到USB Type-A接口中任意两个
+  
+  12. 将网线连接到 LAN 口中任意一个
+  
+  13. 将USB Type-C 接口连接到调试电脑
+  
+  14. 确认以上操作无误后，将电源适配器连接到 DC-JACK，即可开始进行套件开发调试       
       
       > [!WARNING]
       > 
