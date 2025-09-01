@@ -124,7 +124,7 @@ CamThink Event Camera NeoEyes NE101 是一款基于事件触发抓拍的低功�
     <tr>
       <td>SC200AI-137-2M</td>
       <td>137°</td>
-      <td>32m</td>
+      <td>2m</td>
       <td>广角拍摄</td>
     </tr>
   </tbody>

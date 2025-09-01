@@ -135,7 +135,7 @@ CamThink Event-triggered Camera NeoEyes NE101 is a low-power consumption camera 
     <tr>
       <td>SC200AI-137-2M</td>
       <td>137°</td>
-      <td>32m</td>
+      <td>2m</td>
       <td>Ultra-wide angle shooting</td>
     </tr>
   </tbody>
