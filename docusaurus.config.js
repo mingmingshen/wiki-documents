@@ -73,6 +73,13 @@ const config = {
           },
         ],
       }
+    ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-8XB41LWC1W',
+        anonymizeIP: true, // 可选：匿名化IP
+      },
     ]
   ],
   markdown: { mermaid: true },
