@@ -24,7 +24,7 @@ Component parts:
 ⑮ Screw Package: Standard version includes four types of screws, see parts list below for details
 ⑯ Screwdriver
 
-> If you don't have an NE101 yet, you can purchase it through the official website — [NE101 Developer Kit Purchase Link](https://www.camthink.ai/store/neoeyes-ne101/).
+> If you don't have an NE101 yet, you can purchase it through the official website — [NE101 Developer Kit Purchase Link](https://www.camthink.ai/store/ne101-dev-kit/).
 
 ## Parts Checklist
 
