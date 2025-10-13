@@ -353,6 +353,6 @@
   <img src="/img/InstallationGuide/NE101_Guide18.png" alt="NE101_Guide18" style={{ width: '32%' }} />
 </div>
 
-至此，您的NE101 Sensing Camera 开发者套件已安装全部完成，您可以开始使用了。具体使用方式与安装部署可见——[快速开始](https://wiki.camthink.ai/zh-Hans/docs/NeoEyes%20NE101%20Series/Quick%20Start/)。
+至此，您的NE101 Sensing Camera 开发者套件已安装全部完成，您可以开始使用了。具体使用方式与安装部署可见——[快速开始](./1-quick-start.md)。
 
 如有疑问和建议，欢迎加入我们的Discord社区或者反馈到我们的 [GitHub Issues](https://github.com/camthink-ai/lowpower_camera/issues)，与其他开发者进行交流和分享——[Discord](https://discord.com/invite/6TZb2Y8WKx/)。
