@@ -38,7 +38,7 @@ const config = {
   /* 3️⃣  国际化                                         */
   /* -------------------------------------------------- */
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'zh-Hans',
     locales: ['zh-Hans', 'en'],
     localeConfigs: {
       'zh-Hans': { htmlLang: 'zh-Hans', label: '中文' },

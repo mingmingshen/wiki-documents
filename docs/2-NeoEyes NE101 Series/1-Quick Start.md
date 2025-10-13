@@ -72,15 +72,33 @@ NE101系统正常启动后，你可以在电脑或手机的WiFi AP列表寻找�
 - 启用排程抓图：开启功能后支持设置设备周期性进行图像抓拍的相关功能设置。
    - 定时抓图模式：支持设置每天定时抓图或周一至周日具体时间点抓图，时间可以设置00:00 - 23:59，最多支持设置8个抓拍时间用于定时图像抓取。
    - 间隔抓图模式：支持设置抓图的时间间隔，用于按照时间间隔进行图像抓取，支持按照分钟、小时、天的时间纬度进行设置，最多仅支持1个规则设置。
+  
+
 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_12.png')} alt="bracket" style={{ height: '300px', objectFit: 'contain', margin: '0 auto' }} />
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_13.png')} alt="bracket" style={{ height: '300px', objectFit: 'contain', margin: '0 auto' }} />
 </div>
+
+- 上传模式：是数据上传的时机，默认为即拍即传，抓图后立即上报数据，可切换为定时上传。
+  - 即拍即传：抓拍的同时通过网络通讯即刻上传数据。
+  - 定时上传：此模式下可设定定时上传数据的时间，提供输入框，单位为每天、每周一、周二、周三、周四、周五、周六、周日，同时可设置上传的具体时间，如11:33；11:50等。最多支持设置10个上传时间用于上传数据。
+
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
+  <img src={useBaseUrl('/img/QuickStart/NE101/ne101_29.png')} alt="bracket" style={{ height: '300px', objectFit: 'contain', margin: '0 auto' }} />
+</div>
+
 - Alarm-In抓图：开启功能后支持，硬件主板背部的Alarm-In座子输入信号用于图像抓拍。
+  
+
 <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_18.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
 </div>
+
+
 - 启用按键抓图：开启抓图按键，**此功能建议不要关闭**，用于设备外部右侧的开关按键可操作抓取当前图像使用。
+  
+  
 <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_19.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
 </div>
@@ -89,14 +107,18 @@ NE101系统正常启动后，你可以在电脑或手机的WiFi AP列表寻找�
 **数据上报**
 >用于设置NE101的数据上报的MQTT信息，完善下方信息后，点击**Save**按钮即可保存配置
 - Host：用于填写MQTT服务端的域名或IP。
-- MQTT Port：用于填写MQTT订阅端口号，默认为1883。
+- MQTT Port：用于填写MQTT订阅端口号，默认为1883。当时开启SSL时默认端口为8883。
 - Topic：用于设置此设备上报数据的Topic。
 - Client ID：用于明确此在MQTT服务中的客户端唯一标识。
 - QoS：MQTT QoS设置，支持QoS 0、QoS 1、QoS 2可选。
 - Username：用于设置连接MQTT服务所需校验的用户名。
 - Password：用于设置连接MQTT服务所需校验的用户名对应的密码，需要与上方相同。
+- SSL：开启后支持MQTTS协议，显示证书配置相关选项，用于实现加密通信。
+- CA Certificate：将MQTTS服务器的CA证书进行上传，用于验证服务器身份。
+- Client Certificate：将MQTTS客户端的证书进行上传，用于验证客户端身份。
+- Client Key：将MQTTS客户端的私钥进行上传，用于加密通信。
 <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
-  <img src={useBaseUrl('/img/QuickStart/NE101/ne101_15.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
+  <img src={useBaseUrl('/img/QuickStart/NE101/ne101_30.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
 </div>
 
 
@@ -169,14 +191,17 @@ NE101系统正常启动后，你可以在电脑或手机的WiFi AP列表寻找�
 {
   "ts": 1740640441620,
   "values": {
-    "devSn": "undefined",  
-    "devName": "NE101 Sensing Camera",
-    "devMac": "D8:3B:DA:4D:10:2C",
-    "battery": 84,
-    "snapType": "Button",
-    "localtime": "2025-02-27 15:14:01",
-    "imageSize": 74371,
-    "image": "data:image/jpeg;base64,..."
+    "devName": "NE101 Sensing Camera", 
+    "devMac": "D8:3B:DA:71:19:C0", 
+    "devSn": "458658825555", 
+    "hwVersion": "V1.0", 
+    "fwVersion": "NE_101.1.0.3", 
+    "battery": 84,  
+    "batteryVoltage": 4200, 
+    "snapType": "Button", 
+    "localtime": "2025-10-10 12:13:04", 
+    "imageSize": 68255, 
+    "image": "data:image/jpeg;base64,..." 
   }
 }
 ```
@@ -184,13 +209,43 @@ NE101系统正常启动后，你可以在电脑或手机的WiFi AP列表寻找�
 #####  字段说明
 
 - `ts`：时间戳（毫秒）
-- `devName`：设备名称
+- `devName`：设备名称,可自定义修改
 - `devMac`：设备 MAC 地址
+- `devSn`：设备序列号
+- `hwVersion`：硬件版本
+- `fwVersion`：固件版本
 - `battery`：电池电量（百分比）
+- `batteryVoltage`：电池电压（单位：mV）
 - `snapType`：图像采集类型（如 `Button`, `Scheduled`, `PIR` 等）
 - `localtime`：本地时间（字符串格式）
 - `imageSize`：图像大小（单位：字节）
 - `image`：Base64 编码的 JPEG 图像数据，前缀为 `data:image/jpeg;base64,`
+
+
+#### MQTTX接收MQTTS数据
+除了MQTT，在实际生产环境下，数据应用安全性希望得到保障，可以尝试使用MQTTS协议进行数据传输。通过打开Data Report中的SSL开关，即可开启MQTTS数据上报功能。
+##### 步骤说明
+> 需要保证MQTTX服务端可被NE101连接
+1. 打开 MQTTX，点击 `新建连接`。
+2. 设置以下连接参数：
+   - **Host**：`你的MQTTS服务器地址`
+   - **Port**：`8883`
+   - **Client ID**：任意字符串，例如 `mqttx-client-01`
+   - **Topic**：`101mqtts`
+   - **Username / Password**：留空
+   - **SSL/TLS**：开启
+   - **CA Certificate**：将MQTTS服务器的CA证书进行上传，用于验证服务器身份。
+   - **Client Certificate**：将MQTTS客户端的证书进行上传，用于验证客户端身份。
+   - **Client Key**：将MQTTS客户端的私钥进行上传，用于加密通信。
+3. 点击连接后，订阅 Topic `101mqtts`。
+4. 可点击设备右侧的拍照按钮进行图像采集。
+5. 设备采集到图像数据后，将通过 MQTTS 向该 Topic 发布消息。
+
+即可在MQTTX中接收到设备发送给服务器的MQTTS数据，如下图所示：
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
+  <img src={useBaseUrl('/img/QuickStart/NE101/ne101_31.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
+</div>
 
 #####  可视化建议
 
@@ -200,7 +255,11 @@ NE101系统正常启动后，你可以在电脑或手机的WiFi AP列表寻找�
 <img src="data:image/jpeg;base64,...">
 ```
 
-也可以将 Base64 数据粘贴至 [Base64图像查看器](https://base64.guru/converter/decode/image) 进行在线预览。
+也可以将image字段中引号包裹的 Base64 数据粘贴至 [Base64图像查看器](https://base64.guru/converter/decode/image) 进行在线预览。
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
+  <img src={useBaseUrl('/img/QuickStart/NE101/base64.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
+</div>
 
 ### 设备重置
 设备重置的操作为长按拍照按钮10s后等待灯光快速闪动5次后即表示设备重置成功，重置后设备系统会恢复出厂设置，请谨慎操作，重置成功后设备等待下次灯光亮起表示系统准备完成，您可以参考[「设备配置」](#设备配置)重新对设备进行配置。

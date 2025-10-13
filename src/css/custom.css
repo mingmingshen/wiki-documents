@@ -85,3 +85,12 @@
 [data-theme='dark'] code span[class^="token"] {
   color: inherit;
 }
+
+/* 统一 InstallationGuide 文档中的图片显示尺寸 */
+.theme-doc-markdown img[src*="/img/InstallationGuide/"] {
+  display: block;
+  margin: 0 auto 20px;
+  width: 720px; /* 固定宽度以统一尺寸 */
+  max-width: 100%; /* 保证在小屏下自适应 */
+  height: auto;
+}
