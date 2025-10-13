@@ -74,6 +74,15 @@ If you enter the device configuration page, let's take a look at how to modify t
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_12.png')} alt="bracket" style={{ height: '300px', objectFit: 'contain', margin: '0 auto' }} />
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_13.png')} alt="bracket" style={{ height: '300px', objectFit: 'contain', margin: '0 auto' }} />
 </div>
+
+- Upload Mode: Determines when data is uploaded. The default is "Upload Immediately," which reports data right after an image is captured; it can be switched to "Scheduled Upload."
+  - Upload Immediately: Captures and instantly uploads data via the network.
+  - Scheduled Upload: Allows setting specific upload times. Input boxes support daily, or per-day (Monday–Sunday) scheduling, with precise times such as 11:33 or 11:50. Up to 10 upload slots can be configured.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
+  <img src={useBaseUrl('/img/QuickStart/NE101/ne101_29.png')} alt="bracket" style={{ height: '300px', objectFit: 'contain', margin: '0 auto' }} />
+</div>
+
 - Alarm-In image capture: Turn on the function,, the Alarm-In socket on the back of the camera motherboard inputs the signal for image capture.
 <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
   <img src={useBaseUrl('/img/QuickStart/NE101/ne101_18.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
@@ -87,14 +96,18 @@ If you enter the device configuration page, let's take a look at how to modify t
 **Data Reporting**
 >Used to configure the MQTT for NE101 data reporting. After completing the information below, click the **Save** button to save the configuration.
 - Host: used to fill in the domain name or IP address of the MQTT server.
-- MQTT Port: used to fill in the MQTT subscription port number, the default setting is 1883.
+- MQTT Port: used to fill in the MQTT subscription port number, the default setting is 1883.When SSL is enabled, the default port is 8883.
 - Topic: used to set the Topic for data reported by this camera.
 - Client ID: used to identify the client's unique identifier in the MQTT service.
 - QoS: MQTT QoS settings, supporting QoS 0, QoS 1, and QoS 2 options.
 - Username: used to set the username required for verification to connect to the MQTT service.
 - Password: used to set the password corresponding to the user name required for verification when connecting to the MQTT service. It needs to be the same as above.
+- SSL: When enabled, supports the MQTTS protocol and displays certificate-configuration options for encrypted communication.  
+- CA Certificate: Upload the CA certificate of the MQTTS server to verify the server identity.  
+- Client Certificate: Upload the client certificate for the MQTTS connection to authenticate the client.  
+- Client Key: Upload the private key of the MQTTS client for encrypted communication.
 <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
-  <img src={useBaseUrl('/img/QuickStart/NE101/ne101_15.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
+  <img src={useBaseUrl('/img/QuickStart/NE101/ne101_30.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
 </div>
 
 
@@ -167,28 +180,62 @@ The MQTT message payload content sent by the camera is in JSON format, as shown 
 {
   "ts": 1740640441620,
   "values": {
-    "devSn": "undefined",  
-    "devName": "NE101 Sensing Camera",
-    "devMac": "D8:3B:DA:4D:10:2C",
-    "battery": 84,
-    "snapType": "Button",
-    "localtime": "2025-02-27 15:14:01",
-    "imageSize": 74371,
-    "image": "data:image/jpeg;base64,..."
+    "devName": "NE101 Sensing Camera", 
+    "devMac": "D8:3B:DA:71:19:C0", 
+    "devSn": "458658825555", 
+    "hwVersion": "V1.0", 
+    "fwVersion": "NE_101.1.0.3", 
+    "battery": 84,  
+    "batteryVoltage": 4200, 
+    "snapType": "Button", 
+    "localtime": "2025-10-10 12:13:04", 
+    "imageSize": 68255, 
+    "image": "data:image/jpeg;base64,..." 
   }
 }
 ```
 
 #####  Field Description
 
-- `ts`：timestamp (milliseconds)
-- `devName`：device name
-- `devMac`：device MAC address
-- `battery`：battery level (percentage)
-- `snapType`：image collection type（such as `Button`, `Scheduled`, `PIR` etc.）
-- `localtime`：local time (string format)
-- `imageSize`：image size (unit: bytes)
-- `image`：Base64 encoded JPEG image data, prefixed with  `data:image/jpeg;base64,`
+- `ts`: Timestamp (milliseconds)
+- `devName`: Device name, customizable
+- `devMac`: Device MAC address
+- `devSn`: Device serial number
+- `hwVersion`: Hardware version
+- `fwVersion`: Firmware version
+- `battery`: Battery level (percentage)
+- `batteryVoltage`: Battery voltage (unit: mV)
+- `snapType`: Image capture type (e.g., `Button`, `Scheduled`, `PIR`, etc.)
+- `localtime`: Local time (string format)
+- `imageSize`: Image size (unit: bytes)
+- `image`: Base64-encoded JPEG image data, prefixed with `data:image/jpeg;base64,`
+
+#### Receiving MQTTS Data with MQTTX
+In addition to MQTT, you can use the MQTTS protocol for data transmission in production environments where data security is required. Enable MQTTS data reporting by turning on the SSL switch in the Data Report section.
+
+##### Step-by-step Instructions
+> Make sure the MQTTX server can be reached by NE101
+1. Open MQTTX and click `New Connection`.
+2. Configure the following connection parameters:
+   - **Host**: `your MQTTS server address`
+   - **Port**: `8883`
+   - **Client ID**: any string, e.g. `mqttx-client-01`
+   - **Topic**: `101mqtts`
+   - **Username / Password**: leave blank
+   - **SSL/TLS**: enable
+   - **CA Certificate**: upload the MQTTS server’s CA certificate to verify the server identity
+   - **Client Certificate**: upload the MQTTS client certificate to verify the client identity
+   - **Client Key**: upload the MQTTS client private key for encrypted communication
+3. After clicking Connect, subscribe to Topic `101mqtts`.
+4. Press the camera button on the right side of the device to capture an image.
+5. Once the image is captured, the device will publish a message to this Topic via MQTTS.
+
+You will then receive the MQTTS data sent by the device in MQTTX, as shown below:
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
+  <img src={useBaseUrl('/img/QuickStart/NE101/ne101_31.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
+</div>
+
 
 #####  Visualization Suggestion
 
@@ -198,7 +245,11 @@ Use Base64 image data to quickly preview images on web pages or tools:
 <img src="data:image/jpeg;base64,...">
 ```
 
-you can also copy and paste the Base64 data to [Base64 Image Viewer](https://base64.guru/converter/decode/image) for online preview.
+You can also paste the Base64 data wrapped in quotes from the `image` field into the [Base64 Image Viewer](https://base64.guru/converter/decode/image) for an online preview.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
+  <img src={useBaseUrl('/img/QuickStart/NE101/base64.png')} alt="bracket" style={{ height: '400px', objectFit: 'contain', margin: '0 auto' }} />
+</div>
 
 ### Camera Reset
 The operation of resetting the camera is to press and hold the camera button for 10 seconds and wait for the light to flash rapidly 5 times, which means the device has been successfully reset. After the reset, the device system will restore to factory settings. Please operate with caution. After the reset is successful, the device will wait for the light to indicate that the system is ready. User can refer to[「Device Configuration」](#camera-configuration)to reconfigure the camera.

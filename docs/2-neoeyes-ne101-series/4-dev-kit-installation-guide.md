@@ -25,7 +25,7 @@
 ⑮ 螺丝包：标配版本共四种螺丝，详情见下图零件清单
 ⑯ 螺丝刀
 
-> 如果您还没有NE101，可以通过官网进行购买——[NE101开发者套件购买地址](https://www.camthink.ai/store/neoeyes-ne101/)。
+> 如果您还没有NE101，可以通过官网进行购买——[NE101开发者套件购买地址](https://www.camthink.ai/store/ne101-dev-kit/)。
 
 ##  核查零件清单
 
