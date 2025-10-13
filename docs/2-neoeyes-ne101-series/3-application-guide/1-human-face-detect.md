@@ -28,7 +28,7 @@
 - **开发框架**：ESP-IDF插件（v5.4.0或更高版本）
 - **示例代码**：[camthink-ai/esp-who](https://github.com/camthink-ai/esp-who)
 
-> **重要提示**：请务必按照[开发环境配置指南](./../NE100-MB01%20Development%20Board/Software%20Guide/Development%20Environment%20Setup)完成环境配置。
+> **重要提示**：请务必按照[开发环境配置指南](../2-ne100-mb01-development-board/2-software-guide/0-development-environment-setup)完成环境配置。
 
 ## 功能验证
 
@@ -44,7 +44,7 @@
 
 参考详细烧录指南：
 
-- [系统烧录与初始化](./../NE100-MB01%20Development%20Board/Software%20Guide/System%20Flashing%20and%20Initialization)
+- [系统烧录与初始化](../2-ne100-mb01-development-board/2-software-guide/1-system-flashing-and-initialization)
 
 #### 3. 串口输出解析
 

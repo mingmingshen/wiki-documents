@@ -28,7 +28,7 @@ To perform secondary development, make sure the following：
 - **Development Framework**：ESP-IDF Extension（v5.1.6）
 - **Example Repository**：[camthink-ai/esp-who](https://github.com/camthink-ai/esp-who)
 
-> **Important**：Please follow the [Development Environment Setup Guide](./../NE100-MB01%20Development%20Board/Software%20Guide/Development%20Environment%20Setup) to complete the initial configuration.
+> **Important**：Please follow the [Development Environment Setup Guide](../2-ne100-mb01-development-board/2-software-guide/0-development-environment-setup) to complete the initial configuration.
 
 ## Functionality Verification
 
@@ -44,7 +44,7 @@ Connect the development board to PC using a Type-C cable.
 
 Refer to the detailed flashing guide：
 
-- [System Flashing and Initialization](./../NE100-MB01%20Development%20Board/Software%20Guide/System%20Flashing%20and%20Initialization)
+- [System Flashing and Initialization](../2-ne100-mb01-development-board/2-software-guide/1-system-flashing-and-initialization)
 
 #### 3. UART Output Analysis
 

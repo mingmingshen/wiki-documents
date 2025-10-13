@@ -12,7 +12,7 @@ This project provides a sample implementation of a low-power image capture syste
 - Flexible wake-up mechanisms，including timer-based and sensor-triggered wake-up
 - Complete image acquisition and data transmission workflow
 - Open expansion interfaces for AI and sensor module integration
-  - Sensor integration example[「PIR Sensor」](../NE100-MB01%20Development%20Board/Software%20Guide/example-pir)
+  - Sensor integration example[「PIR Sensor」](../2-ne100-mb01-development-board/2-software-guide/3-example-pir)
   - AI integration example:[「Human Face Detection」](./human-face-detect)
 
 ## Program Logic
@@ -67,11 +67,11 @@ flowchart LR
 
 1. **Using Precompiled Firmware**
    
-   For More details please refer to [the Hardware Connection Guide](./../NE100-MB01%20Development%20Board/Hardware%20Guide/Hardware%20Connection)
+   For More details please refer to [the Hardware Connection Guide](../2-ne100-mb01-development-board/1-hardware-guide/1-hardware-connection)
 
 2. **Firmware flashing**
    
-   Refer to the below to flash the firmware：[System Flashing](./../NE100-MB01%20Development%20Board/Software%20Guide/System%20Flashing%20and%20Initialization)
+   Refer to the below to flash the firmware：[System Flashing](../2-ne100-mb01-development-board/2-software-guide/1-system-flashing-and-initialization)
 
 ### Using Source Code Development
 
@@ -199,7 +199,7 @@ The following sections will detail the usage for each function.
 
 ### Software Usage
 
-For basic setup and usage instructions, please refer to [the Quick Start Guide.](../1-Quick%20Start.md)
+For basic setup and usage instructions, please refer to [the Quick Start Guide.](../1-quick-start)
 
 ## Description
 

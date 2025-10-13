@@ -45,13 +45,13 @@ This guide describes how to achieve low-power image capture and transmission in 
 1. Ensure the Cat 1 module is properly installed.
 2. Insert an activated 4G SIM card.
 
-> For More details please refer to [the Hardware Connection Guide](.././Hardware%20Guide/Hardware%20Connection)
+> For More details please refer to [the Hardware Connection Guide](../1-hardware-guide/1-hardware-connection)
 
 #### 2. **Firmware flashing**：
 
    Refer to the below to flash the firmware：
    
-    [the System Flashing and Initialization Guide](./../Software%20Guide/System%20Flashing%20and%20Initialization)
+    [the System Flashing and Initialization Guide](./1-system-flashing-and-initialization)
 
 #### 3. Verify Network Status
 
@@ -68,7 +68,7 @@ This guide describes how to achieve low-power image capture and transmission in 
 2. Test image capture and upload functionality
 
 > Refer to the complete testing procedure in：
-> [Quick Start Guide](./../Quick%20Start)
+> [Quick Start Guide](../1-quick-start)
 
 ### Developing from Source
 

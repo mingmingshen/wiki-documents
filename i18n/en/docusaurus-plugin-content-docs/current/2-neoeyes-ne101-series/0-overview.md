@@ -48,7 +48,7 @@ CamThink Event-triggered Camera NeoEyes NE101 is a low-power consumption camera 
 
 > NeoEyes NE101 supports expandable hardware capabilities based on hardware usage scenarios. For information on the use of various physical interfaces, please refer to[「Hardware Guide」](./2-ne100-mb01-development-board/1-hardware-guide/0-components-overview.md).
 
-- **16-pin IO Interface**: There is a 16pin connector reserved on the back of the motherboard, with GPIOs, DI, DO and other interfaces, which supports access to various sensors to trigger shooting (resource usage depends on the occupancy of the communication module and USB camera). For specific IO resources, please refer to[「Hardware Guide - Hardware Connection - 16-pin GPIO Expansion」](./2-ne100-mb01-development-board/1-hardware-guide/1-hardware-connection.md)
+- **16-pin IO Interface**: There is a 16pin connector reserved on the back of the motherboard, with GPIOs, DI, DO and other interfaces, which supports access to various sensors to trigger shooting (resource usage depends on the occupancy of the communication module and USB camera). For specific IO resources, please refer to[「Hardware Guide - Hardware Connection - 16-pin GPIO Expansion」](./2-ne100-mb01-development-board/1-hardware-guide/1-hardware-connection)
 - **Power Interface**: There is a 2-pin power socket on the back of the motherboard, which supports battery connection for power supply. There is a Type-C interface on the bottom of the motherboard that supports a wired connection for direct power supply (In the case of NE101, it needs to open a hole to let the wire through).
 - **Micro TF Card Slot**: It can be used for storage expansion, suitable for local image or data storage.
 - **Debugging Interface**: Type-C and UART are used for serial port debugging during development.
@@ -142,7 +142,7 @@ CamThink Event-triggered Camera NeoEyes NE101 is a low-power consumption camera 
 </table>
 
 Note: The USB camera module will occupy extra I/O resources. For details, please refer to
-[「Hardware Guide-Hardware Connection-16Pin GPIO Expansion」](../2-ne100-mb01-development-board/1-hardware-guide/1-hardware-connection.md)
+[「Hardware Guide-Hardware Connection-16Pin GPIO Expansion」](./2-ne100-mb01-development-board/1-hardware-guide/1-hardware-connection)
 
 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
   <img src={useBaseUrl('/img/Overview/NE101/sensor1.png')} alt="Cat-1 PCBA" style={{ height: '300px', objectFit: 'contain', margin: '0 auto' }} />
