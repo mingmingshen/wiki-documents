@@ -425,7 +425,7 @@ NG4500系列整机产品规格信息如下
         title: "LLM Chatbot", 
         image: useBaseUrl("/img/Overview/NG45xx/application/OpenWebUI.png"), 
         description: "本指南介绍如何使用 Ollama（轻量推理引擎）在 NVIDIA Jetson Orin 设备上本地部署 DeepSeek-R1 大语言模型，实现离线 AI 交互，安装配置简单高效。", 
-        path: "Deepseek-r1"
+        path: "deepseek-r1"
       },
       { 
         title: "Pose Estimation", 
@@ -437,7 +437,20 @@ NG4500系列整机产品规格信息如下
         title: "YoLo Object Detection", 
         image: useBaseUrl("/img/Overview/NG45xx/application/ObjectDetection.png"), 
         description: "本教程将指导您如何在 NVIDIA Jetson Orin 平台上部署 YOLOv8 模型，并利用 TensorRT 进行推理加速。通过此过程，您将能够在 Jetson Orin 上高效地运行 YOLOv8，实现实时的目标检测。", 
-        path: "Object Detection"
+        path: "object-detection"
+      },
+      { 
+        title: "Dinov3 部署", 
+        image: useBaseUrl("/img/Overview/NG45xx/application/dinov3.png"), 
+        description: "Meta 开源的通用视觉基础模型，包含完整的预训练主干网络、适配器、训练和评测代码。它通过自监督学习（SSL）技术，无需微调即可直接应用于分类、检索、深度估计、目标检测等多种主流视觉任务，适用于自动驾驶、遥感、安防监控、工业检测等领域。", 
+        path: "dinov3"
+      }
+      ,
+      { 
+        title: "Nx Meta Platfrom 部署", 
+        image: useBaseUrl("/img/Overview/NG45xx/application/nx.png"), 
+        description: "Nx Meta Platform 是由Network Optix开发的核心视频管理系统（VMS），提供完整的视频管理、AI分析和云服务解决方案。该平台采用模块化架构，支持从边缘计算设备到云端的一体化部署。", 
+        path: "nx-meta"
       }
     ];
     
