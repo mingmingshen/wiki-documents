@@ -5,12 +5,14 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /* 1️⃣  环境检测 / 动态变量                             */
 /* -------------------------------------------------- */
 const IS_GITHUB = process.env.GITHUB_ACTIONS === 'true';
+const IS_GITHUB_ENV = process.env.DEPLOY_ENV === 'github';
 const BASE_URL  = process.env.BASE_URL  // 手动覆盖优先
-  ?? (IS_GITHUB ? '/wiki-documents/' : '/');
+  ?? (IS_GITHUB && IS_GITHUB_ENV ? '/wiki-documents/' : '/');
 
 const SITE_URL  = process.env.SITE_URL  // 手动覆盖优先
-  ?? (IS_GITHUB ? 'https://camthink-ai.github.io' : 'https://wiki.camthink.ai');
-
+  ?? (IS_GITHUB && IS_GITHUB_ENV ? 'https://camthink-ai.github.io' : 'https://wiki.camthink.ai');
+console.log('BASE_URL---------', BASE_URL);
+console.log('SITE_URL---------', SITE_URL);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
