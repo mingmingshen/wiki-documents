@@ -12,7 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 - 灵活的唤醒机制，支持定时和传感器触发
 - 完整的图像采集和数据传输流程
 - 开放的扩展接口，支持AI和传感器功能扩展
-  - 传感器扩展参见[「PIR示例」](../2-ne100-mb01-development-board/2-software-guide/3-example-pir)
+  - 传感器扩展参见[「PIR示例」](../2-ne100-mb01-development-board/2-software-guide/3-example-pir.md)
   - AI扩展参见[「人脸识别示例」](./human-face-detect)
 
 ## 程序逻辑
@@ -67,11 +67,11 @@ flowchart LR
 
 1. **设备连接**
    
-   完整硬件连接指南：[硬件连接说明](../2-ne100-mb01-development-board/1-hardware-guide/1-hardware-connection)
+   完整硬件连接指南：[硬件连接说明](../2-ne100-mb01-development-board/1-hardware-guide/1-hardware-connection.md)
 
 2. **设备烧录**
    
-   烧录方法请参考：[System Flashing](../2-ne100-mb01-development-board/2-software-guide/1-system-flashing-and-initialization)
+   烧录方法请参考：[System Flashing](../2-ne100-mb01-development-board/2-software-guide/1-system-flashing-and-initialization.md)
 
 ### 使用源码开发验证
 
@@ -199,7 +199,7 @@ flowchart LR
 
 ### 软件使用说明
 
-软件的使用说明可以见[快速开始](../1-Quick%20Start.md)
+软件的使用说明可以见[快速开始](../1-quick-start.md)
 
 ## 应用说明
 
