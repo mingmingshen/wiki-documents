@@ -4,12 +4,13 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /* -------------------------------------------------- */
 /* 1️⃣  环境检测 / 动态变量                             */
 /* -------------------------------------------------- */
-const IS_GITHUB = process.env.GITHUB_ACTIONS === 'true';
-const BASE_URL  = process.env.BASE_URL  // 手动覆盖优先
-  ?? (IS_GITHUB ? '/wiki-documents/' : '/');
+// 优先使用明确的环境变量，不依赖 GITHUB_ACTIONS 自动判断
+const BASE_URL = process.env.BASE_URL || '/';
+const SITE_URL = process.env.SITE_URL || 'https://wiki.camthink.ai';
 
-const SITE_URL  = process.env.SITE_URL  // 手动覆盖优先
-  ?? (IS_GITHUB ? 'https://camthink-ai.github.io' : 'https://wiki.camthink.ai');
+// 调试日志（构建时可见）
+console.log('[Docusaurus Config] BASE_URL:', BASE_URL);
+console.log('[Docusaurus Config] SITE_URL:', SITE_URL);
 
 
 /** @type {import('@docusaurus/types').Config} */
