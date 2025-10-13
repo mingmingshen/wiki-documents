@@ -56,11 +56,14 @@ jobs:
 
 
 
+      # 5.5 清理上一次构建产物，防止路径前缀串味
+      - name: Cleanup build artifacts
+        run: rm -rf build .docusaurus
+
       # 6. 构建 Docusaurus 静态网站 (服务器版本)
       - name: Build website for Cloud Server
         env:
           NODE_ENV: production
-          GITHUB_ACTIONS: true
           GITHUB_PAGES: false
           DEPLOY_ENV: production
           BASE_URL: /
@@ -77,4 +80,3 @@ jobs:
           remote_host: ${{ secrets.SERVER_HOST }}
           remote_user: ${{ secrets.SERVER_USER }}
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
-
