@@ -27,19 +27,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
       基于NVIDIA Jetson平台的高性能边缘计算设备，适用于复杂AI推理和多模态数据处理场景。
     </p>
     <div className="product-links">
-      <Link to={useBaseUrl('docs/NeoEdge NG4500 Series/Overview')} className="link-item">
+      <Link to={useBaseUrl('docs/neoedge-ng4500-series/overview')} className="link-item">
         <span className="link-icon">📖</span>
         <span>产品概述</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEdge NG4500 Series/Quick Start')} className="link-item">
+      <Link to={useBaseUrl('docs/neoedge-ng4500-series/quick-start')} className="link-item">
         <span className="link-icon">🚀</span>
         <span>快速入门</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEdge NG4500 Series/NG4500-CB01 Development Board/Dev Guide')} className="link-item">
+      <Link to={useBaseUrl('docs/neoedge-ng4500-series/ng4500-cb01-development-board/dev-guide')} className="link-item">
         <span className="link-icon">🔧</span>
         <span>开发指南</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEdge NG4500 Series/Application Guide/Deepseek-r1')} className="link-item">
+      <Link to={useBaseUrl('docs/neoedge-ng4500-series/application-guide/deepseek-r1')} className="link-item">
         <span className="link-icon">📱</span>
         <span>应用指南</span>
       </Link>
@@ -56,19 +56,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
       轻量级智能摄像设备，支持边缘视觉分析和无线连接，适用于IoT和轻量级AI应用场景。
     </p>
     <div className="product-links">
-      <Link to={useBaseUrl('docs/NeoEyes NE101 Series/Overview')} className="link-item">
+      <Link to={useBaseUrl('docs/neoeyes-ne101-series/overview')} className="link-item">
         <span className="link-icon">📖</span>
         <span>产品概述</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEyes NE101 Series/Quick Start')} className="link-item">
+      <Link to={useBaseUrl('docs/neoeyes-ne101-series/quick-start')} className="link-item">
         <span className="link-icon">🚀</span>
         <span>快速入门</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEyes NE101 Series/NE100-MB01 Development Board/Dev Guide')} className="link-item">
+      <Link to={useBaseUrl('docs/neoeyes-ne101-series/ne100-mb01-development-board/dev-guide')} className="link-item">
         <span className="link-icon">🔧</span>
         <span>开发指南</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEyes NE101 Series/Application Guide/low-power-image-acquisition')} className="link-item">
+      <Link to={useBaseUrl('docs/neoeyes-ne101-series/application-guide/low-power-image-acquisition')} className="link-item">
         <span className="link-icon">📱</span>
         <span>应用指南</span>
       </Link>

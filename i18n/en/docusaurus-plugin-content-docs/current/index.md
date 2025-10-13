@@ -27,21 +27,21 @@ To help you get started quickly, here are some links to important resources:
       High-performance edge computing device based on NVIDIA® Jetson platform, suitable for complex AI reasoning and multi-modal data processing scenarios.
     </p>
     <div className="product-links">
-      <Link to={useBaseUrl('docs/NeoEdge NG4500 Series/Overview')} className="link-item">
+      <Link to={useBaseUrl('docs/neoedge-ng4500-series/overview')} className="link-item">
         <span className="link-icon">📖</span>
-        <span>product overview</span>
+        <span>Product Overview</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEdge NG4500 Series/Quick Start')} className="link-item">
+      <Link to={useBaseUrl('docs/neoedge-ng4500-series/quick-start')} className="link-item">
         <span className="link-icon">🚀</span>
-        <span>quick start</span>
+        <span>Quick Start</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEdge NG4500 Series/NG4500-CB01 Development Board/Dev Guide')} className="link-item">
+      <Link to={useBaseUrl('docs/neoedge-ng4500-series/ng4500-cb01-development-board/dev-guide')} className="link-item">
         <span className="link-icon">🔧</span>
-        <span>dev. guide</span>
+        <span>Dev Guide</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEdge NG4500 Series/Application Guide/Deepseek-r1')} className="link-item">
+      <Link to={useBaseUrl('docs/neoedge-ng4500-series/application-guide/deepseek-r1')} className="link-item">
         <span className="link-icon">📱</span>
-        <span>application guide</span>
+        <span>Application Guide</span>
       </Link>
     </div>
   </div>
@@ -56,21 +56,21 @@ To help you get started quickly, here are some links to important resources:
       A lightweight vision AI camera that supports image analysis on the edge and wireless connectivity, and is suitable for IoT and lightweight edge AI application scenarios.
     </p>
     <div className="product-links">
-      <Link to={useBaseUrl('docs/NeoEyes NE101 Series/Overview')} className="link-item">
+      <Link to={useBaseUrl('docs/neoeyes-ne101-series/overview')} className="link-item">
         <span className="link-icon">📖</span>
-        <span>product overview</span>
+        <span>Product Overview</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEyes NE101 Series/Quick Start')} className="link-item">
+      <Link to={useBaseUrl('docs/neoeyes-ne101-series/quick-start')} className="link-item">
         <span className="link-icon">🚀</span>
-        <span>quick start</span>
+        <span>Quick Start</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEyes NE101 Series/NE100-MB01 Development Board/Dev Guide')} className="link-item">
+      <Link to={useBaseUrl('docs/neoeyes-ne101-series/ne100-mb01-development-board/dev-guide')} className="link-item">
         <span className="link-icon">🔧</span>
-        <span>dev. guide</span>
+        <span>Dev Guide</span>
       </Link>
-      <Link to={useBaseUrl('docs/NeoEyes NE101 Series/Application Guide/low-power-image-acquisition')} className="link-item">
+      <Link to={useBaseUrl('docs/neoeyes-ne101-series/application-guide/low-power-image-acquisition')}  className="link-item">
         <span className="link-icon">📱</span>
-        <span>application guide</span>
+        <span>Application Guide</span>
       </Link>
     </div>
   </div>
