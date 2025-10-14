@@ -85,7 +85,7 @@ After receiving the device, you can verify the components against the following 
       <td align="center" rowspan="5">Boards</td>
       <td align="center">Mainboard (WIFI Version)</td>
       <td align="center">1</td>
-      <td align="center">Includes N6 chip, standard version comes with OV5640 120° 3M lens</td>
+      <td align="center">Includes chip, standard version comes with OV5640 120° 3M lens</td>
     </tr>
     <tr>
       <td align="center">M6 Image Module</td>
