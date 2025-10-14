@@ -3,7 +3,7 @@ name: Deploy Docusaurus to GitHub Pages (peaceiris)
 on:
   push:
     branches:
-      - main          # 监听 main 分支推送
+      - main # 监听 main 分支推送
 
 ######################################################################
 # 让 workflow 自带的 GITHUB_TOKEN 拥有写入权限，才能推送到 gh-pages 分支
@@ -31,6 +31,31 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+          # 6. 构建 Docusaurus 静态网站 (服务器版本)
+      - name: Build website for Cloud Server
+        env:
+          NODE_ENV: production
+          GITHUB_PAGES: false
+          DEPLOY_ENV: production
+          BASE_URL: /
+          SITE_URL: https://wiki.camthink.ai
+        run: yarn build
+
+      # 7. 使用 rsync 部署到云服务器
+      - name: Deploy to Cloud Server via SSH (rsync)
+        uses: burnett01/rsync-deployments@5.2
+        with:
+          switches: -avzr --delete
+          path: ./build/
+          remote_path: ${{ secrets.TARGET_PATH }}
+          remote_host: ${{ secrets.SERVER_HOST }}
+          remote_user: ${{ secrets.SERVER_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # 5.5 清理上一次构建产物，防止路径前缀串味
+      - name: Cleanup build artifacts
+        run: rm -rf build .docusaurus
+
       # 4. 构建 Docusaurus 静态网站 (GitHub Pages 版本)
       - name: Build website for GitHub Pages
         env:
@@ -53,28 +78,3 @@ jobs:
           user_email: action@github.com
           commit_message: |
             docs: deploy ${{ github.sha }} via GitHub Actions
-
-
-
-      # 6. 构建 Docusaurus 静态网站 (服务器版本)
-      - name: Build website for Cloud Server
-        env:
-          NODE_ENV: production
-          GITHUB_ACTIONS: true
-          GITHUB_PAGES: false
-          DEPLOY_ENV: production
-          BASE_URL: /
-          SITE_URL: https://wiki.camthink.ai
-        run: yarn build
-
-      # 7. 使用 rsync 部署到云服务器
-      - name: Deploy to Cloud Server via SSH (rsync)
-        uses: burnett01/rsync-deployments@5.2
-        with:
-          switches: -avzr --delete
-          path: ./build/
-          remote_path: ${{ secrets.TARGET_PATH }}
-          remote_host: ${{ secrets.SERVER_HOST }}
-          remote_user: ${{ secrets.SERVER_USER }}
-          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
-

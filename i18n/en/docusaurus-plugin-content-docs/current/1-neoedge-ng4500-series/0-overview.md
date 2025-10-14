@@ -425,7 +425,7 @@ Product casing and bracket dimension instruction：
         title: "LLM Chatbot", 
         image: useBaseUrl("/img/Overview/NG45xx/application/OpenWebUI.png"), 
         description: "This guide introduce how to use Ollama(lightweight inference engine) to locally deploy DeepSeek-R1 LLM on NVIDIA Jetson Orin devices, realizing offline AI interaction. Easy configuration with high efficiency.", 
-        path: "Deepseek-r1"
+        path: "deepseek-r1"
       },
       { 
         title: "Pose Estimation", 
@@ -437,7 +437,20 @@ Product casing and bracket dimension instruction：
         title: "YoLo Object Detection", 
         image: useBaseUrl("/img/Overview/NG45xx/application/ObjectDetection.png"), 
         description: "This tutorial will guide you on how to deploy a YOLOv8 model on the NVIDIA Jetson Orin platform and leverage TensorRT for inference acceleration. Through this process, you will be able to efficiently run YOLOv8 on Jetson Orin for real-time object detection.", 
-        path: "Object Detection"
+        path: "object-detection"
+      },
+      { 
+        title: "Dinov3", 
+        image: useBaseUrl("/img/Overview/NG45xx/application/dinov3.png"), 
+        description: "Meta open-source general vision fundamental model, including the complete pre-trained main network, adapter, training, and evaluation code. It can be directly applied to various mainstream vision tasks such as classification, retrieval, depth estimation, and object detection without fine-tuning through self-supervised learning (SSL) technology. It is suitable for fields such as autonomous driving, remote sensing, security monitoring, and industrial inspection.", 
+        path: "dinov3"
+      }
+      ,
+      { 
+        title: "Nx Meta Platfrom", 
+        image: useBaseUrl("/img/Overview/NG45xx/application/nx.png"), 
+        description: "Nx Meta Platform is a core video management system (VMS) developed by Network Optix, providing comprehensive video management, AI analysis, and cloud service solutions. The platform adopts a modular architecture, supporting integrated deployment from edge computing devices to the cloud.", 
+        path: "nx-meta"
       }
     ];
     
