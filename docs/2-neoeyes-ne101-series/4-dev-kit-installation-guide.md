@@ -86,7 +86,7 @@
       <td align="center" rowspan="5">板子</td>
       <td align="center">主板（WIFI版本）</td>
       <td align="center">1</td>
-      <td align="center">包含N6芯片，标准版本配有OV5640 120° 3M 镜头 </td>
+      <td align="center">包含芯片，标准版本配有OV5640 120° 3M 镜头 </td>
     </tr>
     <tr>
       <td align="center">M6图像模组</td>
