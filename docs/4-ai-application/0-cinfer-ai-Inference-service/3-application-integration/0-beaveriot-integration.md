@@ -3,7 +3,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 # Beaveriot Integration
 
 ## 什么是Beaver IoT？
-![beaveriot](/img/Cinfer/beaveriot.png)
+![beaveriot](/img/Cinfer/beaverIot.png)
 Beaver IoT是一个为快速直观的物联网应用开发设计的开源平台。它支持从设备连接到数据处理、分析和可视化的整个过程。此外，Beaver IoT支持物联网开发者利用项目封装能力快速构建各种集成，是物联网原型设计和可扩展解决方案的理想选择。Beaver IoT在物联网领域促进创新和社区协作。
 - [Beaver IoT Github](https://github.com/Milesight-IoT/beaver-iot)
 - [Beaver IoT Docs](https://www.milesight.com/beaver-iot/docs/user-guides/introduction/)
